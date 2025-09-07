@@ -38,8 +38,3 @@
 (time (reduce + (map first (remove empty? (map go numbers)))))
 
 
-
-
-
-(bigint "4185056939")
-

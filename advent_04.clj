@@ -13,8 +13,6 @@
 (def backward
   (remove nil? (map #(re-seq #"SAMX" %) stringput)))
 
-
-
 (def vertical 
   (map clojure.string/join 
        (partition (count stringput) 
@@ -36,7 +34,6 @@
 
 (count diagonal-positive)
 
-
 (def diagonal-negative
  (map clojure.string/join
      (partition 4
@@ -49,36 +46,21 @@
   (nth (nth stringput (- y z)) (+ x z))))))
 
 (count diagonal-negative)
-
-
-
 forward
-
 backward
-
 vertical
+diagonal-positive
 
 (reduce +
-
         (list
-
          (count (remove nil? (map #(re-seq #"XMAS" %) stringput)))
-
          (count (remove nil? (map #(re-seq #"SAMX" %) stringput)))
-
          (count (remove nil? (map #(re-seq #"XMAS" %) vertical)))
-
          (count (remove nil? (map #(re-seq #"SAMX" %) vertical)))
-
          (count (filter #{"XMAS"} diagonal-positive))
-
          (count (filter #{"SAMX"} diagonal-positive))
-
          (count (filter #{"XMAS"} diagonal-negative))
-
          (count (filter #{"SAMX"} diagonal-negative))))
 
-
-diagonal-positive
 
 

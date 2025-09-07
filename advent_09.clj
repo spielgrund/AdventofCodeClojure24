@@ -48,17 +48,10 @@
 "009981118882777333644655556666667775888899"
 "0099811188827773336446555566.............."
 (go (str 2333133121414131402))
-
-
 (reduce + (map #(* (first %) (second %))(map-indexed vector (go (slurp "input_09.txt")))))
-
 (reduce + (map #(* (first %) (second %))(map-indexed vector (go (str 2333133121414131402)))))
 (go (str 2333133121414131402))
-
 (count (slurp "input_09.txt"))
-
 (count (str 2333133121414131402))
-
-
 (count (go (slurp "input_09.txt")))
 (go (slurp "input_09.txt"))

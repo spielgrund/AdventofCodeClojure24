@@ -54,8 +54,6 @@
 
 (count (set (apply concat (for [x unique-chars] (apply concat (remove nil? (go (get-vectors x karte))))))))
 
-#{}
-
 (get-vectors \0 karte)
 
 ; ich brauche die distanz zwischen vector 1 und 2 (2-1)
